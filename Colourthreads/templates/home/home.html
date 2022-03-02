@@ -1,0 +1,111 @@
+{%extends "base.html"%}
+{%block content%}
+<title>Home</title>
+<center><h1 style="color: rgb(248, 245, 245);">Welcome to Colour threads {{request.user.cname}}</h1></center>
+{%if request.user.isAuthenticated == True%}
+<center>
+<h1 style="color: rgb(248, 245, 245);">SHOP BY CATEGORY</h1></center>
+    <div class="row">
+        <div class="column">
+          <div class="card">
+            <h3>SILK SAREES</h3>
+            <p><a href="http://127.0.0.1:8000/{{request.user.cid}}/SILK SAREES">Shop Now</a></p>
+            <p><img src="{{media}}/SILK SAREES.jpg"  height=300 width=300 alt="image not found "></p>
+          </div>
+        </div>
+        <div class="column">
+            <div class="card">
+              <h3>LINEN SAREES</h3>
+              <p><a href="http://127.0.0.1:8000/{{request.user.cid}}/LINEN SAREES">Shop Now</a></p>
+              <p><img src="{{media}}/LINEN SAREES.jpg"  height=300 width=300 alt="image not found "></p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <h3>COTTON SAREES</h3>
+              <p><a href="http://127.0.0.1:8000/{{request.user.cid}}/COTTON SAREES">Shop Now</a></p>
+              <p><img src="{{media}}/COTTON SAREES.jpg"  height=300 width=300 alt="image not found "></p>
+            </div>
+          </div>
+          
+      </div>
+      <div class="row" style="margin-top:20px;">
+        <div class="column">
+          <div class="card">
+            <h3>KURTIS</h3>
+            <p><a href="http://127.0.0.1:8000/{{request.user.cid}}/KURTIS">Shop Now</a></p>
+            <p><img src="{{media}}/KURTIS.jpg"  height=300 width=300 alt="image not found "></p>
+          </div>
+        </div>
+        <div class="column">
+            <div class="card">
+              <h3>ETHNIC DRESSES</h3>
+              <p><a href="http://127.0.0.1:8000/{{request.user.cid}}/ETHNIC DRESSES">Shop Now</a></p>
+              <p><img src="{{media}}/ETHNIC DRESSES.jpg"  height=300 width=300 alt="image not found "></p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <h3>SHAWLS</h3>
+              <p><a href="http://127.0.0.1:8000/{{request.user.cid}}/SHAWLS">Shop Now</a></p>
+              <p><img src="{{media}}/SHAWLS.jpg"  height=300 width=300 alt="image not found "></p>
+            </div>
+          </div>
+          
+      </div>
+
+
+
+{% else %}
+<center>
+  <h1 style="color: rgb(248, 245, 245);">SHOP BY CATEGORY</h1></center>
+<div class="row">
+    <div class="column">
+      <div class="card">
+        <h3>SILK SAREES</h3>
+        <p><a href="http://127.0.0.1:8000/0/SILK SAREES">Shop Now</a></p>
+        <p><img src="{{media}}/SILK SAREES.jpg"  height=300 width=300 alt="image not found "></p>
+      </div>
+    </div>
+    <div class="column">
+        <div class="card">
+          <h3>LINEN SAREES</h3>
+          <p><a href="http://127.0.0.1:8000/0/LINEN SAREES">Shop Now</a></p>
+          <p><img src="{{media}}/LINEN SAREES.jpg"  height=300 width=300 alt="image not found "></p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <h3>COTTON SAREES</h3>
+          <p><a href="http://127.0.0.1:8000/0/COTTON SAREES">Shop Now</a></p>
+          <p><img src="{{media}}/COTTON SAREES.jpg"  height=300 width=300 alt="image not found "></p>
+        </div>
+      </div>
+      
+  </div>
+  <div class="row" style="margin-top:20px;">
+    <div class="column">
+      <div class="card">
+        <h3>KURTIS</h3>
+        <p><a href="http://127.0.0.1:8000/0/KURTIS">Shop Now</a></p>
+        <p><img src="{{media}}/KURTIS.jpg"  height=300 width=300 alt="image not found "></p>
+      </div>
+    </div>
+    <div class="column">
+        <div class="card">
+          <h3>ETHNIC DRESSES</h3>
+          <p><a href="http://127.0.0.1:8000/0/ETHNIC DRESSES">Shop Now</a></p>
+          <p><img src="{{media}}/ETHNIC DRESSES.jpg"  height=300 width=300 alt="image not found "></p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <h3>SHAWLS</h3>
+          <p><a href="http://127.0.0.1:8000/0/SHAWLS">Shop Now</a></p>
+          <p><img src="{{media}}/SHAWLS.jpg"  height=300 width=300 alt="image not found "></p>
+        </div>
+      </div>
+      
+  </div>
+  {% endif %}
+{%endblock%}

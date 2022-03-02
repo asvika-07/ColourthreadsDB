@@ -1,0 +1,285 @@
+{%load static%}
+<html>
+    <head>
+        <title>
+           Home page 
+        </title>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <head href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/1f2664dfc6.js" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function () {
+                $(".menu-icon").on("click", function () {
+                    $("nav ul").toggleClass("showing");
+                });
+            });
+
+            // Scrolling Effect
+
+            $(window).on("scroll", function () {
+                if ($(window).scrollTop()) {
+                    $('nav').addClass('scroll');
+                } else {
+                    $('nav').removeClass('scroll');
+                }
+            })
+        </script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <style>
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                font-family: "Helvetica Neue", sans-serif;
+                font-weight: lighter;
+                /* background-image: url('bg.jpg') !important; */
+                background-color: #E5E4E2;
+                /* background-attachment: fixed; */
+            }
+
+            header {
+                width: 100%;
+                height: 15vh;
+            }
+            h1 {
+                 display: block;
+                 font-size: 2em;
+                margin-block-start: 0.67em;
+                margin-block-end: 0.67em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                font-weight: bold;
+                color: #fff;
+}
+            .content {
+                width: 94%;
+                margin: 4em auto;
+                font-size: 20px;
+                line-height: 30px;
+                text-align: justify;
+            }
+
+            .neon {
+                width: 150px;
+                height: 130px;
+                position: absolute;
+                padding: 0;
+                top: 0px;
+                left: 10px;
+                /* float: left;
+                margin: 16px 46px;
+                color: #000;
+                font-weight: bold;
+                font-size: 20px;
+                letter-spacing: 2px; */
+            }
+
+            .black {
+                width: 0px;
+                height: 0px;
+                position: absolute;
+                padding: -1px;
+                top: -47px;
+                left: 8px;
+            }
+
+            nav {
+                position: fixed;
+                width: 100%;
+                line-height: 60px;
+                z-index: 1 !important;
+            }
+
+            nav ul {
+                line-height: 60px;
+                list-style: none;
+                background: rgba(0, 0, 0, 0);
+                overflow: hidden;
+                color: #000;
+                padding: 0;
+                text-align: right;
+                margin: 0;
+                padding-right: 40px;
+                transition: 1s;
+            }
+
+            nav.scroll ul {
+                background: #ffffff;
+            }
+
+            nav.scroll ul img {
+                width: 0px;
+                height: 0px;
+            }
+
+            nav.scroll ul .black {
+                width: 250px;
+                height: 200px;
+                position: absolute;
+                padding: -1px;
+                top: -47px;
+                left: 8px;
+            }
+
+            nav.scroll ul li a {
+                text-decoration: none;
+                color: black;
+                font-size: 20px;
+            }
+
+            nav ul li {
+                display: inline-block;
+                padding: 16px 40px;
+            }
+
+            nav ul li a {
+                text-decoration: none;
+                color: rgb(253, 253, 253);
+                font-size: 20px;
+            }
+
+            nav ul li a:hover {
+                text-decoration: none;
+                background-color: #F8F8F8;
+                color: black;
+                transition-duration: 300ms;
+                border: 2px solid black;
+                border-radius: 30px;
+                padding: 20px;
+            }
+
+            nav.scroll ul li a:hover {
+                text-decoration: none;
+                background-color: #000;
+                color: #F8F8F8;
+                transition-duration: 300ms;
+                border: 2px solid black;
+                border-radius: 30px;
+                padding: 20px;
+            }
+
+            .menu-icon {
+                line-height: 60px;
+                width: 100%;
+                background: #000;
+                text-align: right;
+                box-sizing: border-box;
+                padding: 15px 24px;
+                cursor: pointer;
+                color: #fff;
+                display: none;
+            }
+
+            @media(max-width: 786px) {
+                .logo {
+                    position: fixed;
+                    top: 0;
+                    margin-top: 16px;
+                }
+
+                nav ul {
+                    max-height: 0px;
+                    background: #000;
+                }
+
+                nav.scroll ul {
+                    background: #F8F8F8;
+                }
+
+                .showing {
+                    max-height: 34em;
+                }
+
+                nav ul li {
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding: 24px;
+                    text-align: center;
+                }
+
+                .menu-icon {
+                    display: block;
+                }
+            }
+            * {
+  box-sizing: border-box;
+  
+}
+@keyframes move-twink-back {
+                from {background-position:0 0;}
+                to {background-position:-10000px 5000px;}
+            }
+            @-webkit-keyframes move-twink-back {
+                from {background-position:0 0;}
+                to {background-position:-10000px 5000px;}
+            }
+            @-moz-keyframes move-twink-back {
+                from {background-position:0 0;}
+                to {background-position:-10000px 5000px;}
+            }
+            @-ms-keyframes move-twink-back {
+                from {background-position:0 0;}
+                to {background-position:-10000px 5000px;}
+            }
+            .stars {
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            width:100%;
+            height:100%;
+            display:block;
+            }
+
+            .stars {
+            background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+            z-index:0;
+            -moz-animation:move-twink-back 200s linear infinite;
+            -ms-animation:move-twink-back 200s linear infinite;
+            -o-animation:move-twink-back 200s linear infinite;
+            -webkit-animation:move-twink-back 200s linear infinite;
+            animation:move-twink-back 200s linear infinite;
+            }
+
+
+
+</style>
+    </head>
+    <body>
+        <div class="stars">
+        <div class="wrapper">
+            <header>
+                <nav>
+                    <div class="menu-icon">
+                        <i class="fa fa-bars fa-2x"></i>
+                    </div>
+                    <div class="menu">
+                        
+                        <ul>
+                            <li><a href="/home"><img src="{%static 'default.jpeg'%}" class="neon"></a></li>
+            {%if request.user.isAuthenticated == True%}
+            <li><a href="add_admin/{{request.user.A_id}}">Add new Admin</a></li>
+            <li><a href="{{request.user.A_id}}/Add_products">Add Products</a></li>
+            <li><a href="{{request.user.A_id}}/check_Stock">Check stock</a></li>
+            <li><a href="{{request.user.A_id}}/Add_Cat_img">Add image for category</a></li>
+            <li><a href="all_orders_view/{{request.user.A_id}}">View orders</a></li>
+            <li><a href="/logout">Log Out</a></li>
+            {%endif%}
+        </ul>
+        </div>
+    </nav>
+    </header>
+    </div>
+    <center>
+    <h1>ADMIN PAGE !</h1>
+</center>
+    </body>
+</html>

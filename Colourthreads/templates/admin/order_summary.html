@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>Order summary</title>
+        <style>
+            p{
+                color:white;
+            }
+            @keyframes move-twink-back {
+                from {background-position:0 0;}
+                to {background-position:-10000px 5000px;}
+            }
+            @-webkit-keyframes move-twink-back {
+                from {background-position:0 0;}
+                to {background-position:-10000px 5000px;}
+            }
+            @-moz-keyframes move-twink-back {
+                from {background-position:0 0;}
+                to {background-position:-10000px 5000px;}
+            }
+            @-ms-keyframes move-twink-back {
+                from {background-position:0 0;}
+                to {background-position:-10000px 5000px;}
+            }
+            .stars {
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            width:100%;
+            height:100%;
+            display:block;
+            }
+
+            .stars {
+            background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+            z-index:0;
+            -moz-animation:move-twink-back 200s linear infinite;
+            -ms-animation:move-twink-back 200s linear infinite;
+            -o-animation:move-twink-back 200s linear infinite;
+            -webkit-animation:move-twink-back 200s linear infinite;
+            animation:move-twink-back 200s linear infinite;
+            }
+            .summary{
+              background-color: white;
+              border-radius: 50px;
+              width : 500px;
+              height: 700px;
+              text-align: left;
+
+            }
+            p{
+              color: black;
+              
+            }
+            .images{
+              text-align: center;
+            }
+            .p1{
+              padding-left: 10px;
+            }
+            .p2{
+              padding-left: 75px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="stars"> 
+          
+        <a href="http://127.0.0.1:8000/login/{{ user.cid }}">Back</a>
+        
+        <center>
+          <div class= "summary">
+            <div class="images">
+            <h1>order summary </h1>
+                    {%for i in s%}
+                    <p><img src="{{media}}/{{i.0}}.jpg" width =150 height =150 alt="image not found "></p>
+                  </div>
+                <p class="p1">NAME     : {{i.1}}</p>
+                <p class="p1">CATEGORY : {{i.2}}</p>
+                <p class="p1">PRICE : {{i.4}}</p>
+                <p class="p1">DESCRIPTION : {{i.5}}</p>
+                
+                {% endfor %}
+                <p class="p1">Name    : {{user.cname}}</p>
+                <p class="p1">Email   : {{user.cemail}}</p>
+                <p class="p1">Contact : {{user_pno.phone_number}}</p>
+                <p class="p1">Address : {{user_add.address1}}</p>
+                <p class="p2">          {{user_add.address2}}</p>
+                <p class="p2">          {{user_add.city}}</p>
+                <p class="p2">          {{user_add.pincode}}</p>
+                <p class="p1"><a href="http://127.0.0.1:8000/login/place_order_success/{{user.cid}}/{{s.0.0}}">submit</a></p>
+                </div>
+                
+                </div>
+              </div>
+        </center>
+      
+        </div> 
+    </body>
+</html>
